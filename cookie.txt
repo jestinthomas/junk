@@ -1,0 +1,43 @@
+import requests
+
+cookies = {
+    'hasReview': 'false',
+    'serviceToken': 'TM0u3MMx8GSzUsae0z1vdd9ZZHHgupxNHRURR^%^2F0HUFODkV9BxrRdaLAUxTZ488oaJyKxElWkTcMCxG2yZMCB1C72Ibh4rHGg^%^2BU23^%^2FaZo^%^2Fdar5^%^2FSMlL15KMRFVQW5T7MFtpXXY7FVIha9ccjAhsAtpm7o6dY45FhreRC^%^2B^%^2FABrbSs^%^3D',
+    'xm_user_in_num': '0',
+    'msgNum': '1',
+    'mstuid': '1531212449414_8975',
+    '_ga': 'GA1.2.1786519586.1531212450',
+    '_gid': 'GA1.2.1469842395.1531212450',
+    'xmuuid': 'XMGUEST-A5D68945-B0AC-8004-9A86-CF8D0BDCD4F8',
+    'globalSite': 'in',
+    '__sonar': '1345758067177119268',
+    'cUserId': '0z1-C5q7-7OHcQmuhreYQl8fKzo',
+    'mUserId': 'ulwbo124VdnCzmINGvStSZDtJaD^%^2By4n^%^2BuTcD^%^2FSB71uY^%^3D',
+    'XM_0z1-C5q7-7OHcQmuhreYQl8fKzo_UN': '5166369549',
+    'xm_order_btauth': '56199442b01fe4420dfa0f5d30938063',
+    'msttime': 'https^%^3A^%^2F^%^2Fwww.mi.com^%^2Fin^%^2Findex.html',
+    'msttime1': 'https^%^3A^%^2F^%^2Fwww.mi.com^%^2Fin^%^2Findex.html',
+    'mstz': '17ecdcf116a260f8-85_9998_0+976f63538c81dd1e8053756dea5653c0^|^%^2F^%^2Fwww.mi.com^%^2Fin^%^2Findex.html^|488490149.20^|pcpid^|https^%^3A^%^2F^%^2Fevent.mi.com^%^2Fin^%^2Fmi4anniversary2018^%^2Fmi-4-you^|',
+    'xm_vistor': '1531212449414_8975_1531301500641-1531301619981',
+}
+
+headers = {
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+    'Accept': '*/*',
+    'Referer': 'https://event.mi.com/in/mi4anniversary2018/mi-4-you',
+    'Connection': 'keep-alive',
+}
+
+params = (
+    ('jsonpcallback', 'seckill'),
+)
+
+response = requests.get('https://fs.buy.mi.com/in/seckill/info', headers=headers, params=params, cookies=cookies)
+
+#NB. Original query string below. It seems impossible to parse and
+#reproduce query strings 100% accurately so the one below is given
+#in case the reproduced version is not "correct".
+# response = requests.get('https://fs.buy.mi.com/in/seckill/info?jsonpcallback=seckill', headers=headers, cookies=cookies)
+
